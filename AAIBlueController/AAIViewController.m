@@ -76,14 +76,23 @@
     return [log stringByAppendingString:[NSString stringWithFormat:@"\n%@", message]];
 }
 
-- (IBAction)sendMessagePressed:(UIButton *)sender
+- (void)sendDeviceText:(NSString *)text
 {
-    NSData *data = [self.userInputTextField.text dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *data = [text dataUsingEncoding:NSUTF8StringEncoding];
     [self.peripheral writeValue:data
               forCharacteristic:self.activeCharacteristic
                            type:CBCharacteristicWriteWithoutResponse];
 }
 
+- (IBAction)sendMessagePressed:(UIButton *)sender
+{
+    [self sendDeviceText:self.userInputTextField.text];
+}
+
+- (IBAction)directionButtonPressed:(UIButton *)sender
+{
+    [self sendDeviceText:sender.titleLabel.text];
+}
 
 #pragma mark - CBCentralManagerDelegate
 
