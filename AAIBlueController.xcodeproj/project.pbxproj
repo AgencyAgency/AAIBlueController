@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF5A322B191B0CB40078AD31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5A322A191B0CB40078AD31 /* Foundation.framework */; };
+		CF5A322D191B0CB40078AD31 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5A322C191B0CB40078AD31 /* CoreGraphics.framework */; };
+		CF5A322F191B0CB40078AD31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5A322E191B0CB40078AD31 /* UIKit.framework */; };
+		CF5A3235191B0CB40078AD31 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF5A3233191B0CB40078AD31 /* InfoPlist.strings */; };
+		CF5A3237191B0CB40078AD31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5A3236191B0CB40078AD31 /* main.m */; };
+		CF5A323B191B0CB40078AD31 /* AAIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5A323A191B0CB40078AD31 /* AAIAppDelegate.m */; };
+		CF5A323E191B0CB40078AD31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5A323C191B0CB40078AD31 /* Main.storyboard */; };
+		CF5A3241191B0CB40078AD31 /* AAIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5A3240191B0CB40078AD31 /* AAIViewController.m */; };
+		CF5A3243191B0CB40078AD31 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF5A3242191B0CB40078AD31 /* Images.xcassets */; };
+		CF5A324A191B0CB40078AD31 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5A3249191B0CB40078AD31 /* XCTest.framework */; };
+		CF5A324B191B0CB40078AD31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5A322A191B0CB40078AD31 /* Foundation.framework */; };
+		CF5A324C191B0CB40078AD31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5A322E191B0CB40078AD31 /* UIKit.framework */; };
+		CF5A3254191B0CB40078AD31 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF5A3252191B0CB40078AD31 /* InfoPlist.strings */; };
+		CF5A3256191B0CB40078AD31 /* AAIBlueControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5A3255191B0CB40078AD31 /* AAIBlueControllerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF5A324D191B0CB40078AD31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF5A321F191B0CB40078AD31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF5A3226191B0CB40078AD31;
+			remoteInfo = AAIBlueController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF5A3227191B0CB40078AD31 /* AAIBlueController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AAIBlueController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF5A322A191B0CB40078AD31 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CF5A322C191B0CB40078AD31 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CF5A322E191B0CB40078AD31 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CF5A3232191B0CB40078AD31 /* AAIBlueController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AAIBlueController-Info.plist"; sourceTree = "<group>"; };
+		CF5A3234191B0CB40078AD31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CF5A3236191B0CB40078AD31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CF5A3238191B0CB40078AD31 /* AAIBlueController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AAIBlueController-Prefix.pch"; sourceTree = "<group>"; };
+		CF5A3239191B0CB40078AD31 /* AAIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAIAppDelegate.h; sourceTree = "<group>"; };
+		CF5A323A191B0CB40078AD31 /* AAIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAIAppDelegate.m; sourceTree = "<group>"; };
+		CF5A323D191B0CB40078AD31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF5A323F191B0CB40078AD31 /* AAIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAIViewController.h; sourceTree = "<group>"; };
+		CF5A3240191B0CB40078AD31 /* AAIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAIViewController.m; sourceTree = "<group>"; };
+		CF5A3242191B0CB40078AD31 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CF5A3248191B0CB40078AD31 /* AAIBlueControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AAIBlueControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF5A3249191B0CB40078AD31 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CF5A3251191B0CB40078AD31 /* AAIBlueControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AAIBlueControllerTests-Info.plist"; sourceTree = "<group>"; };
+		CF5A3253191B0CB40078AD31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CF5A3255191B0CB40078AD31 /* AAIBlueControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAIBlueControllerTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF5A3224191B0CB40078AD31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF5A322D191B0CB40078AD31 /* CoreGraphics.framework in Frameworks */,
+				CF5A322F191B0CB40078AD31 /* UIKit.framework in Frameworks */,
+				CF5A322B191B0CB40078AD31 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF5A3245191B0CB40078AD31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF5A324A191B0CB40078AD31 /* XCTest.framework in Frameworks */,
+				CF5A324C191B0CB40078AD31 /* UIKit.framework in Frameworks */,
+				CF5A324B191B0CB40078AD31 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF5A321E191B0CB40078AD31 = {
+			isa = PBXGroup;
+			children = (
+				CF5A3230191B0CB40078AD31 /* AAIBlueController */,
+				CF5A324F191B0CB40078AD31 /* AAIBlueControllerTests */,
+				CF5A3229191B0CB40078AD31 /* Frameworks */,
+				CF5A3228191B0CB40078AD31 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF5A3228191B0CB40078AD31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF5A3227191B0CB40078AD31 /* AAIBlueController.app */,
+				CF5A3248191B0CB40078AD31 /* AAIBlueControllerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF5A3229191B0CB40078AD31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF5A322A191B0CB40078AD31 /* Foundation.framework */,
+				CF5A322C191B0CB40078AD31 /* CoreGraphics.framework */,
+				CF5A322E191B0CB40078AD31 /* UIKit.framework */,
+				CF5A3249191B0CB40078AD31 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF5A3230191B0CB40078AD31 /* AAIBlueController */ = {
+			isa = PBXGroup;
+			children = (
+				CF5A3239191B0CB40078AD31 /* AAIAppDelegate.h */,
+				CF5A323A191B0CB40078AD31 /* AAIAppDelegate.m */,
+				CF5A323C191B0CB40078AD31 /* Main.storyboard */,
+				CF5A323F191B0CB40078AD31 /* AAIViewController.h */,
+				CF5A3240191B0CB40078AD31 /* AAIViewController.m */,
+				CF5A3242191B0CB40078AD31 /* Images.xcassets */,
+				CF5A3231191B0CB40078AD31 /* Supporting Files */,
+			);
+			path = AAIBlueController;
+			sourceTree = "<group>";
+		};
+		CF5A3231191B0CB40078AD31 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF5A3232191B0CB40078AD31 /* AAIBlueController-Info.plist */,
+				CF5A3233191B0CB40078AD31 /* InfoPlist.strings */,
+				CF5A3236191B0CB40078AD31 /* main.m */,
+				CF5A3238191B0CB40078AD31 /* AAIBlueController-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF5A324F191B0CB40078AD31 /* AAIBlueControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF5A3255191B0CB40078AD31 /* AAIBlueControllerTests.m */,
+				CF5A3250191B0CB40078AD31 /* Supporting Files */,
+			);
+			path = AAIBlueControllerTests;
+			sourceTree = "<group>";
+		};
+		CF5A3250191B0CB40078AD31 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF5A3251191B0CB40078AD31 /* AAIBlueControllerTests-Info.plist */,
+				CF5A3252191B0CB40078AD31 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF5A3226191B0CB40078AD31 /* AAIBlueController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF5A3259191B0CB40078AD31 /* Build configuration list for PBXNativeTarget "AAIBlueController" */;
+			buildPhases = (
+				CF5A3223191B0CB40078AD31 /* Sources */,
+				CF5A3224191B0CB40078AD31 /* Frameworks */,
+				CF5A3225191B0CB40078AD31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AAIBlueController;
+			productName = AAIBlueController;
+			productReference = CF5A3227191B0CB40078AD31 /* AAIBlueController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF5A3247191B0CB40078AD31 /* AAIBlueControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF5A325C191B0CB40078AD31 /* Build configuration list for PBXNativeTarget "AAIBlueControllerTests" */;
+			buildPhases = (
+				CF5A3244191B0CB40078AD31 /* Sources */,
+				CF5A3245191B0CB40078AD31 /* Frameworks */,
+				CF5A3246191B0CB40078AD31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF5A324E191B0CB40078AD31 /* PBXTargetDependency */,
+			);
+			name = AAIBlueControllerTests;
+			productName = AAIBlueControllerTests;
+			productReference = CF5A3248191B0CB40078AD31 /* AAIBlueControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF5A321F191B0CB40078AD31 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AAI;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = AgencyAgency;
+				TargetAttributes = {
+					CF5A3247191B0CB40078AD31 = {
+						TestTargetID = CF5A3226191B0CB40078AD31;
+					};
+				};
+			};
+			buildConfigurationList = CF5A3222191B0CB40078AD31 /* Build configuration list for PBXProject "AAIBlueController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF5A321E191B0CB40078AD31;
+			productRefGroup = CF5A3228191B0CB40078AD31 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF5A3226191B0CB40078AD31 /* AAIBlueController */,
+				CF5A3247191B0CB40078AD31 /* AAIBlueControllerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF5A3225191B0CB40078AD31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF5A3243191B0CB40078AD31 /* Images.xcassets in Resources */,
+				CF5A3235191B0CB40078AD31 /* InfoPlist.strings in Resources */,
+				CF5A323E191B0CB40078AD31 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF5A3246191B0CB40078AD31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF5A3254191B0CB40078AD31 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF5A3223191B0CB40078AD31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF5A323B191B0CB40078AD31 /* AAIAppDelegate.m in Sources */,
+				CF5A3237191B0CB40078AD31 /* main.m in Sources */,
+				CF5A3241191B0CB40078AD31 /* AAIViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF5A3244191B0CB40078AD31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF5A3256191B0CB40078AD31 /* AAIBlueControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF5A324E191B0CB40078AD31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF5A3226191B0CB40078AD31 /* AAIBlueController */;
+			targetProxy = CF5A324D191B0CB40078AD31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF5A3233191B0CB40078AD31 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF5A3234191B0CB40078AD31 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CF5A323C191B0CB40078AD31 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF5A323D191B0CB40078AD31 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CF5A3252191B0CB40078AD31 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF5A3253191B0CB40078AD31 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF5A3257191B0CB40078AD31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CF5A3258191B0CB40078AD31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF5A325A191B0CB40078AD31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AAIBlueController/AAIBlueController-Prefix.pch";
+				INFOPLIST_FILE = "AAIBlueController/AAIBlueController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CF5A325B191B0CB40078AD31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AAIBlueController/AAIBlueController-Prefix.pch";
+				INFOPLIST_FILE = "AAIBlueController/AAIBlueController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CF5A325D191B0CB40078AD31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AAIBlueController.app/AAIBlueController";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AAIBlueController/AAIBlueController-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AAIBlueControllerTests/AAIBlueControllerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CF5A325E191B0CB40078AD31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AAIBlueController.app/AAIBlueController";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AAIBlueController/AAIBlueController-Prefix.pch";
+				INFOPLIST_FILE = "AAIBlueControllerTests/AAIBlueControllerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF5A3222191B0CB40078AD31 /* Build configuration list for PBXProject "AAIBlueController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF5A3257191B0CB40078AD31 /* Debug */,
+				CF5A3258191B0CB40078AD31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF5A3259191B0CB40078AD31 /* Build configuration list for PBXNativeTarget "AAIBlueController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF5A325A191B0CB40078AD31 /* Debug */,
+				CF5A325B191B0CB40078AD31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CF5A325C191B0CB40078AD31 /* Build configuration list for PBXNativeTarget "AAIBlueControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF5A325D191B0CB40078AD31 /* Debug */,
+				CF5A325E191B0CB40078AD31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF5A321F191B0CB40078AD31 /* Project object */;
+}
