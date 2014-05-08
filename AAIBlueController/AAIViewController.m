@@ -13,9 +13,28 @@
 
 @interface AAIViewController ()
 
+@property (nonatomic, strong) NSString *connected;
+@property (weak, nonatomic) IBOutlet UILabel *connectionLabel;
+@property (weak, nonatomic) IBOutlet UITextView *statusTextView;
+@property (nonatomic, strong) NSString *status;
 @end
 
 @implementation AAIViewController
+
+- (instancetype)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _status = @"";
+    }
+    return self;
+}
+
+- (void)setConnected:(NSString *)connected
+{
+    _connected = connected;
+    self.connectionLabel.text = connected;
+}
 
 - (void)scanForDevices
 {
@@ -33,6 +52,18 @@
     [self scanForDevices];
 }
 
+- (void)setStatus:(NSString *)status
+{
+    _status = status;
+    self.statusTextView.text = status;
+}
+
+- (NSString *)appendStatusMessage:(NSString *)message
+{
+    NSString *log = [self.status copy];
+    NSLog(@"%@", log);
+    return [log stringByAppendingString:[NSString stringWithFormat:@"\n%@", message]];
+}
 
 #pragma mark - CBCentralManagerDelegate
 
@@ -40,6 +71,11 @@
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral
 {
     NSLog(@"Connected to peripheral: %@", peripheral);
+    
+    [peripheral setDelegate:self];
+    [peripheral discoverServices:nil];
+    self.connected = [NSString stringWithFormat:@"Connected: %@", peripheral.state == CBPeripheralStateConnected ? @"YES" : @"NO"];
+    NSLog(@"%@", self.connected);
 }
 
 // CBCentralManagerDelegate - This is called with the CBPeripheral class as its main input parameter. This contains most of the information there is to know about a BLE peripheral.
@@ -86,13 +122,30 @@
 // CBPeripheralDelegate - Invoked when you discover the peripheral's available services.
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error
 {
-    NSLog(@"did discover servcies");
+    NSLog(@"did discover services");
+    
+    for (CBService *service in peripheral.services) {
+        NSString *log = [NSString stringWithFormat:@"Discovered service: %@", service.UUID];
+        self.status = [self appendStatusMessage:log];
+        
+        [peripheral discoverCharacteristics:nil forService:service];
+    }
 }
 
 // Invoked when you discover the characteristics of a specified service.
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error
 {
     NSLog(@"discovered characteristics for service: %@", service);
+    
+    if ([service.UUID isEqual:[CBUUID UUIDWithString:PDC_BLE_HM10_SERVICE_UUID]]) {
+        for (CBCharacteristic *aChar in service.characteristics) {
+            if ([aChar.UUID isEqual:[CBUUID UUIDWithString:PDC_BLE_HM10_CHARACTERISTIC_UUID]]) {
+//                [self.peripheral setNotifyValue:YES forCharacteristic:aChar];
+//                [self.peripheral readValueForCharacteristic:aChar];
+                self.status = [self appendStatusMessage:[NSString stringWithFormat:@"Found our thing characteristic: %@", aChar]];
+            }
+        }
+    }
 }
 
 // Invoked when you retrieve a specified characteristic's value, or when the peripheral device notifies your app that the characteristic's value has changed.
