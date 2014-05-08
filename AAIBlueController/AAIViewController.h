@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@import CoreBluetooth;
+@import QuartzCore;
 
-@interface AAIViewController : UIViewController
+@interface AAIViewController : UIViewController <CBCentralManagerDelegate, CBPeripheralDelegate>
+
+@property (nonatomic, strong) CBCentralManager *centralManager;
+@property (nonatomic, strong) CBPeripheral *peripheral;
 
 @end
