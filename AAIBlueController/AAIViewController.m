@@ -17,6 +17,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *connectionLabel;
 @property (weak, nonatomic) IBOutlet UITextView *statusTextView;
 @property (nonatomic, strong) NSString *status;
+
+
+@property (weak, nonatomic) IBOutlet UITextField *userInputTextField;
+@property (weak, nonatomic) IBOutlet UIButton *sendButton;
+@property (strong, nonatomic) CBCharacteristic *activeCharacteristic;
 @end
 
 @implementation AAIViewController
@@ -28,6 +33,12 @@
         _status = @"";
     }
     return self;
+}
+
+- (void)setActiveCharacteristic:(CBCharacteristic *)activeCharacteristic
+{
+    _activeCharacteristic = activeCharacteristic;
+    self.sendButton.enabled = YES;
 }
 
 - (void)setConnected:(NSString *)connected
@@ -64,6 +75,15 @@
     NSLog(@"%@", log);
     return [log stringByAppendingString:[NSString stringWithFormat:@"\n%@", message]];
 }
+
+- (IBAction)sendMessagePressed:(UIButton *)sender
+{
+    NSData *data = [self.userInputTextField.text dataUsingEncoding:NSUTF8StringEncoding];
+    [self.peripheral writeValue:data
+              forCharacteristic:self.activeCharacteristic
+                           type:CBCharacteristicWriteWithoutResponse];
+}
+
 
 #pragma mark - CBCentralManagerDelegate
 
@@ -143,6 +163,7 @@
                 [self.peripheral setNotifyValue:YES forCharacteristic:aChar];
 //                [self.peripheral readValueForCharacteristic:aChar];
                 self.status = [self appendStatusMessage:[NSString stringWithFormat:@"Found our thing characteristic: %@", aChar]];
+                self.activeCharacteristic = aChar;
             }
         }
     }
