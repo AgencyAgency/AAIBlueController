@@ -140,7 +140,7 @@
     if ([service.UUID isEqual:[CBUUID UUIDWithString:PDC_BLE_HM10_SERVICE_UUID]]) {
         for (CBCharacteristic *aChar in service.characteristics) {
             if ([aChar.UUID isEqual:[CBUUID UUIDWithString:PDC_BLE_HM10_CHARACTERISTIC_UUID]]) {
-//                [self.peripheral setNotifyValue:YES forCharacteristic:aChar];
+                [self.peripheral setNotifyValue:YES forCharacteristic:aChar];
 //                [self.peripheral readValueForCharacteristic:aChar];
                 self.status = [self appendStatusMessage:[NSString stringWithFormat:@"Found our thing characteristic: %@", aChar]];
             }
@@ -152,6 +152,14 @@
 - (void)peripheral:(CBPeripheral *)peripheral didUpdateValueForCharacteristic:(CBCharacteristic *)characteristic error:(NSError *)error
 {
     NSLog(@"did update value for characteristic: %@", characteristic);
+    
+    // Updated value for heart rate measurement received
+    if ([characteristic.UUID isEqual:[CBUUID UUIDWithString:PDC_BLE_HM10_CHARACTERISTIC_UUID]]) {
+        self.status = [self appendStatusMessage:[NSString stringWithFormat:@"updated value for characteristic: %@", characteristic]];
+        
+        NSString *dataString = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
+        self.status = [self appendStatusMessage:[NSString stringWithFormat:@"value: %@", dataString]];
+    }
 }
 
 
