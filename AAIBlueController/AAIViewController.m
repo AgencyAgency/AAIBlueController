@@ -73,7 +73,7 @@
 {
     NSString *log = [self.status copy];
     NSLog(@"%@", log);
-    return [log stringByAppendingString:[NSString stringWithFormat:@"\n%@", message]];
+    return [NSString stringWithFormat:@"%@\n%@", message, log];
 }
 
 - (void)sendDeviceText:(NSString *)text
@@ -82,17 +82,20 @@
     [self.peripheral writeValue:data
               forCharacteristic:self.activeCharacteristic
                            type:CBCharacteristicWriteWithoutResponse];
+    self.status = [self appendStatusMessage:[NSString stringWithFormat:@"Sending: %@", text]];
 }
 
 - (IBAction)sendMessagePressed:(UIButton *)sender
 {
     [self sendDeviceText:self.userInputTextField.text];
+    [self.userInputTextField resignFirstResponder];
 }
 
 - (IBAction)directionButtonPressed:(UIButton *)sender
 {
     [self sendDeviceText:sender.titleLabel.text];
 }
+
 
 #pragma mark - CBCentralManagerDelegate
 
