@@ -13,7 +13,7 @@
 		CF5A3235191B0CB40078AD31 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF5A3233191B0CB40078AD31 /* InfoPlist.strings */; };
 		CF5A3237191B0CB40078AD31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5A3236191B0CB40078AD31 /* main.m */; };
 		CF5A323B191B0CB40078AD31 /* AAIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5A323A191B0CB40078AD31 /* AAIAppDelegate.m */; };
-		CF5A323E191B0CB40078AD31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5A323C191B0CB40078AD31 /* Main.storyboard */; };
+		CF5A323E191B0CB40078AD31 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5A323C191B0CB40078AD31 /* iPhone.storyboard */; };
 		CF5A3241191B0CB40078AD31 /* AAIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5A3240191B0CB40078AD31 /* AAIViewController.m */; };
 		CF5A3243191B0CB40078AD31 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF5A3242191B0CB40078AD31 /* Images.xcassets */; };
 		CF5A324A191B0CB40078AD31 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5A3249191B0CB40078AD31 /* XCTest.framework */; };
@@ -21,6 +21,7 @@
 		CF5A324C191B0CB40078AD31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF5A322E191B0CB40078AD31 /* UIKit.framework */; };
 		CF5A3254191B0CB40078AD31 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF5A3252191B0CB40078AD31 /* InfoPlist.strings */; };
 		CF5A3256191B0CB40078AD31 /* AAIBlueControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF5A3255191B0CB40078AD31 /* AAIBlueControllerTests.m */; };
+		CF5A3260191B20880078AD31 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5A325F191B20880078AD31 /* iPad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,7 @@
 		CF5A3238191B0CB40078AD31 /* AAIBlueController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AAIBlueController-Prefix.pch"; sourceTree = "<group>"; };
 		CF5A3239191B0CB40078AD31 /* AAIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAIAppDelegate.h; sourceTree = "<group>"; };
 		CF5A323A191B0CB40078AD31 /* AAIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAIAppDelegate.m; sourceTree = "<group>"; };
-		CF5A323D191B0CB40078AD31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF5A323D191B0CB40078AD31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/iPhone.storyboard; sourceTree = "<group>"; };
 		CF5A323F191B0CB40078AD31 /* AAIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AAIViewController.h; sourceTree = "<group>"; };
 		CF5A3240191B0CB40078AD31 /* AAIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAIViewController.m; sourceTree = "<group>"; };
 		CF5A3242191B0CB40078AD31 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -53,6 +54,7 @@
 		CF5A3251191B0CB40078AD31 /* AAIBlueControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AAIBlueControllerTests-Info.plist"; sourceTree = "<group>"; };
 		CF5A3253191B0CB40078AD31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CF5A3255191B0CB40078AD31 /* AAIBlueControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AAIBlueControllerTests.m; sourceTree = "<group>"; };
+		CF5A325F191B20880078AD31 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +116,8 @@
 			children = (
 				CF5A3239191B0CB40078AD31 /* AAIAppDelegate.h */,
 				CF5A323A191B0CB40078AD31 /* AAIAppDelegate.m */,
-				CF5A323C191B0CB40078AD31 /* Main.storyboard */,
+				CF5A323C191B0CB40078AD31 /* iPhone.storyboard */,
+				CF5A325F191B20880078AD31 /* iPad.storyboard */,
 				CF5A323F191B0CB40078AD31 /* AAIViewController.h */,
 				CF5A3240191B0CB40078AD31 /* AAIViewController.m */,
 				CF5A3242191B0CB40078AD31 /* Images.xcassets */,
@@ -230,8 +233,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF5A3243191B0CB40078AD31 /* Images.xcassets in Resources */,
+				CF5A3260191B20880078AD31 /* iPad.storyboard in Resources */,
 				CF5A3235191B0CB40078AD31 /* InfoPlist.strings in Resources */,
-				CF5A323E191B0CB40078AD31 /* Main.storyboard in Resources */,
+				CF5A323E191B0CB40078AD31 /* iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,12 +287,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		CF5A323C191B0CB40078AD31 /* Main.storyboard */ = {
+		CF5A323C191B0CB40078AD31 /* iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CF5A323D191B0CB40078AD31 /* Base */,
 			);
-			name = Main.storyboard;
+			name = iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		CF5A3252191B0CB40078AD31 /* InfoPlist.strings */ = {
@@ -380,7 +384,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AAIBlueController/AAIBlueController-Prefix.pch";
 				INFOPLIST_FILE = "AAIBlueController/AAIBlueController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -393,7 +399,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AAIBlueController/AAIBlueController-Prefix.pch";
 				INFOPLIST_FILE = "AAIBlueController/AAIBlueController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -457,6 +465,7 @@
 				CF5A325B191B0CB40078AD31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF5A325C191B0CB40078AD31 /* Build configuration list for PBXNativeTarget "AAIBlueControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +474,7 @@
 				CF5A325E191B0CB40078AD31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
